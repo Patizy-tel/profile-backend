@@ -3,8 +3,7 @@ const Profile = require('../models/profile');
 
 // Create a new profile
 exports.createProfile = (req, res) => {
-  const { firstName, lastName, email, phoneNumber, description } = req.body;
-  const file = req.file ? req.file.path : null;
+  const { firstName, lastName, email, phoneNumber, description, file } = req.body;
 
   const profile = new Profile({
     firstName,
