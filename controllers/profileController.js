@@ -19,7 +19,7 @@ exports.createProfile = (req, res) => {
       res.json(savedProfile);
     })
     .catch((error) => {
-      res.status(500).json({ error: 'Failed to create the profile' });
+      res.status(500).json({ error: error });
     });
 };
 

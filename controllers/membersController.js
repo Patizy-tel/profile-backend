@@ -1,5 +1,5 @@
 // controllers/profileController.js
-const Profile = require('../models/profile');
+
 const MemberModel = require('../models/members')
 
 // Create a new profile
@@ -12,7 +12,7 @@ exports.createMember = (req, res) => {
       res.json(savedProfile);
     })
     .catch((error) => {
-      res.status(500).json({ error: 'Failed to create the profile' });
+      res.status(500).json({ error: error });
     });
 };
 
